@@ -1,4 +1,5 @@
-export const products = [
+import { extraProducts } from './extraProducts.js';
+const _base = [
   {
     id: 1,
     name: "MuscleBlaze Biozyme Performance Whey",
@@ -6,7 +7,7 @@ export const products = [
     category: "Protein Powder",
     type: "Whey Protein Concentrate",
     servingSize: "33g",
-    image: "/products/mb_biozyme_whey.png",
+    image: "https://m.media-amazon.com/images/I/71VnwikGbSL._SX679_.jpg",
     description: "India's #1 sports nutrition brand. Biozyme uses an upgraded whey formula with DigeSEB enzyme blend for up to 50% better protein absorption compared to regular whey.",
     ingredients: [
       { name: "Whey Protein Concentrate (80%)", percentage: 58, risk: "safe" },
@@ -30,7 +31,7 @@ export const products = [
     category: "Protein Powder",
     type: "Unflavored Whey Concentrate",
     servingSize: "30g",
-    image: "/products/asitis_whey.png",
+    image: "https://m.media-amazon.com/images/I/71LdpemUXJL._SX679_.jpg",
     description: "100% pure and raw whey protein concentrate. No fillers, no added sugars, no artificial flavours — strictly as-it-is from the manufacturer.",
     ingredients: [
       { name: "Whey Protein Concentrate (80%)", percentage: 97, risk: "safe" },
@@ -48,7 +49,7 @@ export const products = [
     category: "Protein Powder",
     type: "Whey Protein Concentrate",
     servingSize: "33g",
-    image: "/products/nakpro_whey.png",
+    image: "https://m.media-amazon.com/images/I/71lVwRf6kJL._SX679_.jpg",
     description: "Nakpro's performance whey is manufactured in India with transparent labelling and no proprietary blends, offering great value for Indian athletes.",
     ingredients: [
       { name: "Whey Protein Concentrate (80%)", percentage: 70, risk: "safe" },
@@ -70,7 +71,7 @@ export const products = [
     category: "Pre-Workout",
     type: "Stimulant Pre-Workout",
     servingSize: "10g",
-    image: "/products/mb_preworkout.png",
+    image: "https://m.media-amazon.com/images/I/7144k02s2FL._SX679_.jpg",
     description: "Clinically-dosed pre-workout by India's most trusted brand. Formulated to boost endurance, strength and explosive energy for intense workouts.",
     ingredients: [
       { name: "L-Citrulline Malate", percentage: 30, risk: "safe" },
@@ -94,7 +95,7 @@ export const products = [
     category: "BCAAs",
     type: "Effervescent BCAA Tablets",
     servingSize: "2 tablets (8.5g)",
-    image: "/products/fastup_bcaa.png",
+    image: "https://m.media-amazon.com/images/I/51ANNHR7-JL._SX679_.jpg",
     description: "India's first effervescent BCAA recovery supplement in a convenient tube format. Rapid absorption with 2:1:1 BCAA ratio plus electrolytes for post-workout recovery.",
     ingredients: [
       { name: "L-Leucine", percentage: 32, risk: "safe" },
@@ -118,7 +119,7 @@ export const products = [
     category: "Creatine",
     type: "Pure Creatine Monohydrate",
     servingSize: "5g",
-    image: "/products/hkvitals_creatine.png",
+    image: "https://img2.hkrtcdn.com/38900/prd_3889981-MuscleBlaze-Micronised-Creatine-Monohydrate-Unflavoured-250-g_o.jpg",
     description: "100% pure micronized creatine monohydrate from HealthKart's premium HK Vitals range. No flavors, no fillers — just pharmaceutical-grade creatine.",
     ingredients: [
       { name: "Creatine Monohydrate (Micronized)", percentage: 100, risk: "safe" },
@@ -135,7 +136,7 @@ export const products = [
     category: "Protein Powder",
     type: "Whey Protein Concentrate",
     servingSize: "25g",
-    image: "/products/myprotein_whey.png",
+    image: "https://m.media-amazon.com/images/I/81zw1AGDFVL._SX679_.jpg",
     description: "Europe's #1 sports nutrition brand, hugely popular on HealthKart India. High-quality WPC with 21g protein per serving at an affordable price point.",
     ingredients: [
       { name: "Whey Protein Concentrate (80%)", percentage: 72, risk: "safe" },
@@ -157,7 +158,7 @@ export const products = [
     category: "Mass Gainer",
     type: "Weight Gainer Blend",
     servingSize: "170g",
-    image: "/products/bigmuscles_mass.png",
+    image: "https://m.media-amazon.com/images/I/71pp67Q9s4L._SX679_.jpg",
     description: "A hardcore mass gainer formulated for hardgainers and athletes looking to bulk up fast. Popular among gym-goers in tier-2 and tier-3 Indian cities.",
     ingredients: [
       { name: "Maltodextrin", percentage: 42, risk: "moderate" },
@@ -183,7 +184,7 @@ export const products = [
     category: "Mass Gainer",
     type: "Whey Mass Gainer",
     servingSize: "150g",
-    image: "/products/healthfarm_whey.png",
+    image: "https://img9.hkrtcdn.com/30186/prd_3018521-Healthfarm-Massive-Whey-Gainer-3-kg-Chocolate-Cream_o.jpg",
     description: "Healthfarm's best-selling mass gainer with a high-calorie matrix, enriched with vitamins and digestive enzymes for better nutrient absorption.",
     ingredients: [
       { name: "Maltodextrin", percentage: 40, risk: "moderate" },
@@ -208,7 +209,7 @@ export const products = [
     category: "Protein Powder",
     type: "Whey Protein Concentrate",
     servingSize: "32g",
-    image: "/products/bigflex_whey.png",
+    image: "https://m.media-amazon.com/images/I/719YpGSLmIL._SX679_.jpg",
     description: "Bigflex is an emerging Indian supplement brand offering quality whey at competitive prices. A reliable choice for gym beginners in India.",
     ingredients: [
       { name: "Whey Protein Concentrate (80%)", percentage: 78, risk: "safe" },
@@ -230,7 +231,7 @@ export const products = [
     category: "Protein Bar",
     type: "Nutrition & Protein Bar",
     servingSize: "67g",
-    image: "/products/ritebite_bar.png",
+    image: "https://m.media-amazon.com/images/I/61fGUPShh2L._SX679_PIbundle-6,TopRight,0,0_AA679SH20_.jpg",
     description: "India's leading protein bar brand. RiteBite Max Protein Active is a convenient on-the-go snack with 20g of protein, popular in Indian gyms and health stores.",
     ingredients: [
       { name: "Soy Protein Isolate", percentage: 28, risk: "low" },
@@ -255,7 +256,7 @@ export const products = [
     category: "Vitamins",
     type: "Sports Multivitamin",
     servingSize: "2 tablets",
-    image: "/products/mb_multivitamin.png",
+    image: "https://m.media-amazon.com/images/I/4119sh667cL._SY300_SX300_QL70_FMwebp_.jpg",
     description: "A comprehensive daily multivitamin formulated for active Indians. Contains 51 vital nutrients including vitamins, minerals, and antioxidants to support overall health and athletic performance.",
     ingredients: [
       { name: "Vitamin C (Ascorbic Acid)", percentage: 20, risk: "safe" },
@@ -276,8 +277,31 @@ export const products = [
     macros: { protein: 0, carbs: 0, fat: 0, calories: 0 },
   },
 ];
+export const products = [..._base, ...extraProducts];
 
-export const categories = ["All", "Protein Powder", "Pre-Workout", "Mass Gainer", "Creatine", "BCAAs", "Protein Bar", "Vitamins"];
+export const categories = ["All","Protein Powder","Pre-Workout","Mass Gainer","Creatine","BCAAs","Protein Bar","Vitamins","Fat Burner","Omega-3","Glutamine","ZMA","Electrolytes"];
+
+export const brands = {
+  "MuscleBlaze": { origin: "India", flag: "🇮🇳", founded: "2012", description: "India's #1 sports nutrition brand by HealthKart.", certifications: ["FSSAI", "GMP", "Informed Sport"] },
+  "AS-IT-IS Nutrition": { origin: "India", flag: "🇮🇳", founded: "2018", description: "Zero-additive, transparent label Indian brand.", certifications: ["FSSAI", "GMP"] },
+  "Nakpro": { origin: "India", flag: "🇮🇳", founded: "2019", description: "Clean-label Indian brand with no proprietary blends.", certifications: ["FSSAI"] },
+  "Fast&Up": { origin: "India", flag: "🇮🇳", founded: "2015", description: "Swiss effervescent technology, India's #1 electrolyte brand.", certifications: ["FSSAI", "GMP", "Informed Sport"] },
+  "HK Vitals (HealthKart)": { origin: "India", flag: "🇮🇳", founded: "2011", description: "HealthKart's premium in-house supplement line.", certifications: ["FSSAI", "GMP"] },
+  "Myprotein": { origin: "United Kingdom", flag: "🇬🇧", founded: "2004", description: "Europe's #1 sports nutrition brand, sold in India via HealthKart.", certifications: ["Informed Sport", "GMP"] },
+  "Big Muscles Nutrition": { origin: "India", flag: "🇮🇳", founded: "2009", description: "Indian sports nutrition brand popular in tier-2/3 cities.", certifications: ["FSSAI"] },
+  "Healthfarm": { origin: "India", flag: "🇮🇳", founded: "2017", description: "Affordable Indian supplement brand with enzyme-enriched formulas.", certifications: ["FSSAI"] },
+  "Bigflex": { origin: "India", flag: "🇮🇳", founded: "2016", description: "Budget-friendly Indian brand targeting beginners.", certifications: ["FSSAI"] },
+  "RiteBite": { origin: "India", flag: "🇮🇳", founded: "2010", description: "India's leading protein bar brand.", certifications: ["FSSAI"] },
+  "Optimum Nutrition": { origin: "USA", flag: "🇺🇸", founded: "1986", description: "World's most trusted supplement brand. NSF Certified for Sport.", certifications: ["NSF Certified for Sport", "Informed Sport", "GMP"] },
+  "Dymatize": { origin: "USA", flag: "🇺🇸", founded: "1994", description: "Premium US brand known for Informed Sport certified ISO100.", certifications: ["Informed Sport", "GMP"] },
+  "MyFitnessFuel (MFF)": { origin: "India", flag: "🇮🇳", founded: "2015", description: "Direct-to-consumer Indian brand with clean whey formulas.", certifications: ["FSSAI"] },
+  "Cellucor": { origin: "USA", flag: "🇺🇸", founded: "2002", description: "World's best-selling pre-workout brand (C4).", certifications: ["GMP"] },
+  "NOW Foods": { origin: "USA", flag: "🇺🇸", founded: "1968", description: "Trusted US natural health brand. NSF GMP certified since 1999.", certifications: ["NSF", "GMP", "Non-GMO", "Kosher", "Halal"] },
+  "Muscletech": { origin: "USA", flag: "🇺🇸", founded: "1995", description: "US-based sports nutrition brand known for high-stimulant products.", certifications: ["GMP"] },
+  "Thorne": { origin: "USA", flag: "🇺🇸", founded: "1984", description: "Medical-grade supplement brand. NSF Certified for Sport.", certifications: ["NSF Certified for Sport", "GMP"] },
+  "WOW Life Science": { origin: "India", flag: "🇮🇳", founded: "2013", description: "ISO 22000 certified Indian wellness brand.", certifications: ["ISO 22000", "FSSAI"] },
+  "Nuun": { origin: "USA", flag: "🇺🇸", founded: "2004", description: "NSF Certified clean electrolyte tablets used by Olympic athletes.", certifications: ["NSF Certified for Sport", "Non-GMO", "Vegan"] },
+};
 
 export const ratingConfig = {
   safe: {

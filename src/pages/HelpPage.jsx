@@ -106,7 +106,14 @@ function IngredientCard({ ing }) {
         <div className="help-ing-left">
           <div>
             <div className="help-ing-name">{ing.name}</div>
-            <div className="help-ing-cat">{ing.category}</div>
+            <div className="help-ing-cat-row">
+              <span className="help-ing-cat">{ing.category}</span>
+              {ing.formula && (
+                <span className="help-ing-formula" title="Chemical formula">
+                  ⚗️ {ing.formula}
+                </span>
+              )}
+            </div>
           </div>
         </div>
         <div className="help-ing-right">
@@ -127,6 +134,13 @@ function IngredientCard({ ing }) {
 
       {open && (
         <div className="help-ing-body">
+          {/* Mechanism callout — only if data exists */}
+          {ing.mechanism && (
+            <div className="help-mechanism-box">
+              <span className="help-mechanism-label">🔬 Biochemical Mechanism</span>
+              <p className="help-section-text">{ing.mechanism}</p>
+            </div>
+          )}
           <div className="help-ing-grid">
             <div className="help-ing-section">
               <div className="help-section-label">What is it?</div>
